@@ -11,7 +11,11 @@ import com.huntertit.mohinhungdung.R;
 import com.huntertit.mohinhungdung.model.entity.Demo;
 import com.huntertit.mohinhungdung.presenter.MainPresenter;
 
+import org.json.JSONObject;
+
+import java.util.HashMap;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity implements MainView {
     private MainPresenter mainPresenter;
@@ -39,6 +43,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @Override
     public void displayMain(List<Demo> demoList) {
-        listView.setAdapter(new ArrayAdapter<Demo>(this,android.R.layout.simple_list_item_1,demoList));
+        listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, demoList));
     }
 }
